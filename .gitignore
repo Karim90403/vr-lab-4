@@ -2,9 +2,10 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+*.mp4
 # C extensions
 *.so
+*.avi
 
 # Distribution / packaging
 .Python
@@ -103,10 +104,10 @@ celerybeat.pid
 
 # Environments
 .env
-.test.env
 .venv
 env/
 venv/
+logs/
 ENV/
 env.bak/
 venv.bak/
