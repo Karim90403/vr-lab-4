@@ -44,9 +44,6 @@ While running the Eye Tracking and Head Pose Estimation script, you can interact
 - **'c' Key**: Calibrate Head Pose
   - Pressing the 'c' key recalibrates the head pose estimation to the current orientation of the user's head. This sets the current head pose as the new reference point.
 
-- **'r' Key**: Start/Stop Recording
-  - Toggling the 'r' key starts or pauses the recording of data to log folder. 
-
 - **'q' Key**: Quit Program
   - Pressing the 'q' key will exit the program. 
 

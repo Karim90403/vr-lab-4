@@ -2,9 +2,11 @@ import os
 
 import cv2 as cv
 import numpy as np
+from dotenv import load_dotenv, find_dotenv
 
 from support.normalize_pitch import get_normalized_pitch
 
+load_dotenv(find_dotenv())
 
 def estimate_head_pose(landmarks, image_size):
     # Scale factor based on user's face width (assumes model face width is 150mm)

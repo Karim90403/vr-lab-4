@@ -6,6 +6,7 @@ import argparse
 import os
 import socket
 import time
+from distutils.util import strtobool
 
 import cv2 as cv
 import mediapipe as mp
@@ -16,9 +17,10 @@ from support import AngleBuffer, estimate_head_pose, get_vector_position, get_bl
 
 load_dotenv(find_dotenv())
 
-debug = os.getenv("DEBUG", False)
-enable_head_pose = os.getenv("ENABLE_HEAD_POSE", True)
-show_data = os.getenv("SHOW_ON_SCREEN_DATA", True)
+
+debug = strtobool(os.getenv("DEBUG", "False"))
+enable_head_pose = strtobool(os.getenv("ENABLE_HEAD_POSE", "False"))
+show_data = strtobool(os.getenv("SHOW_ON_SCREEN_DATA", "False"))
 
 total_blinks = 0
 total_blinks_frame_counter = 0
@@ -174,7 +176,7 @@ try:
                 total_blinks_frame_counter = 0
 
             # Display all facial landmarks if enabled
-            if os.getenv("SHOW_FACIAL_LANDMARKS", True):
+            if strtobool(os.getenv("SHOW_FACIAL_LANDMARKS", "False")):
                 for point in mesh_points:
                     cv.circle(frame, tuple(point), 1, (0, 255, 0), -1)
             # Process and display eye features
