@@ -216,8 +216,8 @@ try:
                 print(f"Right Eye Center X: {r_cx} Y: {r_cy}")
                 print(f"Left Iris Relative Pos Dx: {l_dx} Dy: {l_dy}")
                 print(f"Right Iris Relative Pos Dx: {r_dx} Dy: {r_dy}\n")
-                # Check if head pose estimation is enabled
-                if enable_head_pose:
+
+            if enable_head_pose:
                     pitch, yaw, roll = estimate_head_pose(mesh_points, (img_h, img_w))
                     angle_buffer.add([pitch, yaw, roll])
                     pitch, yaw, roll = angle_buffer.get_average()
