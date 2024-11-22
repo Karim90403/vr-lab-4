@@ -54,7 +54,7 @@ While running the Eye Tracking and Head Pose Estimation script, you can interact
 - Python 3.x
 - OpenCV (opencv-python)
 - MediaPipe (mediapipe)
-- Other Python standard libraries: `math`, `socket`, `argparse`, `time`, `csv`, `datetime`, `os`
+- Other Python standard libraries: `math`, `argparse`, `time`, `dotenv`, `datetime`, `os`
 
 ---
 
