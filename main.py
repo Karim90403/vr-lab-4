@@ -1,7 +1,3 @@
-"""
-Demonstration of the GazeTracking library.
-Check the README.md for complete documentation.
-"""
 import argparse
 import os
 import socket
